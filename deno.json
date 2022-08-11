@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["esnext"],
+    "strict": true,
+    "types": [
+      "./types/global.d.ts",
+      "https://raw.githubusercontent.com/takker99/deno-gas-types/main/mod.d.ts"
+    ]
+  },
+  "importMap": "import_map.json",
+  "tasks": {
+    "login": "clasp login",
+    "create": "clasp create --rootDir ./dist && cpx ./dist/.clasp.json .",
+    "open": "clasp open",
+    "build": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/build.ts",
+    "push": "clasp push",
+    "deploy": "deno task build && deno task push"
+  }
+}
