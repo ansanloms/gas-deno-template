@@ -10,11 +10,6 @@
   },
   "importMap": "import_map.json",
   "tasks": {
-    "login": "clasp login",
-    "create": "clasp create --rootDir ./dist && cpx ./dist/.clasp.json .",
-    "open": "clasp open",
-    "build": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/build.ts",
-    "push": "clasp push",
-    "deploy": "deno task build && deno task push"
+    "build": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/build.ts"
   }
 }
