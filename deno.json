@@ -5,7 +5,7 @@
     "strict": true,
     "types": [
       "./types/global.d.ts",
-      "https://raw.githubusercontent.com/takker99/deno-gas-types/main/mod.d.ts"
+      "https://raw.githubusercontent.com/ansanloms/deno-gas-types/main/mod.d.ts"
     ]
   },
   "importMap": "import_map.json",
