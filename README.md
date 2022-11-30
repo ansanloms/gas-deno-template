@@ -19,7 +19,7 @@ Then enable the Google Apps Script API:
 deno task create --title "My Script"
 ```
 
-### Clone exists project.
+### Clone exists project
 
 ```bash
 deno task clone --id <Project ID>
