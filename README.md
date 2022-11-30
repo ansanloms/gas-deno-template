@@ -4,30 +4,29 @@ Writing Google Apps Script in deno.
 
 ## Getting Started
 
-Install [google/clasp](https://github.com/google/clasp).
-
-Login.
+### Login
 
 ```bash
-clasp login
+deno task clasp login
 ```
 
-Create new project.
+Then enable the Google Apps Script API:
+<https://script.google.com/home/usersettings>
+
+### Create new project
 
 ```bash
-mkdir ./dist
-clasp create --title "My Script" --rootDir ./dist
-cp ./dist/.clasp.json ./.
+deno task create --title "My Script"
 ```
 
-Build.
+### Clone exists project.
 
 ```bash
-deno task build
+deno task clone --id <Project ID>
 ```
 
-Deploy.
+### Deploy
 
 ```bash
-clasp push
+deno task deploy
 ```
