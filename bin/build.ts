@@ -13,3 +13,12 @@ await build({
   plugins: [httpFetch, GasPlugin],
 });
 stop();
+
+await Promise.all([
+  "appsscript.json",
+].map((file) =>
+  Deno.copyFile(
+    path.join(__dirname, `../src/${file}`),
+    path.join(__dirname, `../dist/${file}`),
+  )
+));
