@@ -30,6 +30,7 @@
     "clasp": "deno run --allow-read --allow-env --allow-net --allow-write --allow-sys --allow-run npm:@google/clasp@2.4.2",
     "create": "deno run --allow-read --allow-run --allow-write ./bin/create.ts",
     "clone": "deno run --allow-read --allow-run --allow-write ./bin/clone.ts",
-    "deploy": "deno task build && deno task clasp push"
+    "clean": "deno run --allow-read --allow-write ./bin/clean.ts",
+    "deploy": "deno task clean && deno task build && deno task clasp push"
   }
 }
