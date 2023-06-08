@@ -2,31 +2,11 @@
 
 Writing Google Apps Script in deno.
 
-## Getting Started
+## Usage
 
-### Login
-
-```bash
-deno task clasp login
-```
-
-Then enable the Google Apps Script API:
-<https://script.google.com/home/usersettings>
-
-### Create new project
+### build
 
 ```bash
-deno task create --title "My Script"
-```
-
-### Clone exists project
-
-```bash
-deno task clone --id <Project ID>
-```
-
-### Deploy
-
-```bash
-deno task deploy
+deno task clean
+deno task build
 ```

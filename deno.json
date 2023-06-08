@@ -1,37 +1,29 @@
 {
   "lint": {
     "exclude": [
-      "README.md",
-      ".clasp.json",
       "dist/"
     ]
   },
   "fmt": {
     "exclude": [
-      "README.md",
-      ".clasp.json",
       "dist/"
     ]
   },
   "imports": {
-    "std/": "https://deno.land/std@0.186.0/",
-    "esbuild/": "https://deno.land/x/esbuild@v0.17.18/",
-    "esbuild-gas-plugin/": "https://esm.sh/esbuild-gas-plugin@0.5.0/",
+    "std/": "https://deno.land/std@0.190.0/",
+    "esbuild/": "https://deno.land/x/esbuild@v0.17.19/",
+    "esbuild-gas-plugin/": "https://esm.sh/esbuild-gas-plugin@0.5.2/",
     "esbuild_plugin_http_fetch/": "https://deno.land/x/esbuild_plugin_http_fetch@v1.0.3/"
   },
   "tasks": {
     "build": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/build.ts",
-    "clasp": "deno run --allow-read --allow-env --allow-net --allow-write --allow-sys --allow-run npm:@google/clasp@2.4.2",
-    "create": "deno run --allow-read --allow-run --allow-write ./bin/create.ts",
-    "clone": "deno run --allow-read --allow-run --allow-write ./bin/clone.ts",
-    "clean": "deno run --allow-read --allow-write ./bin/clean.ts",
-    "deploy": "deno task clean && deno task build && deno task clasp push"
+    "clean": "deno run --allow-read --allow-write ./bin/clean.ts"
   },
   "compilerOptions": {
     "types": [
       "./types/global.d.ts",
-      "https://raw.githubusercontent.com/ansanloms/deno-gas-types/v1.0.62/types/index.d.ts",
-      "https://raw.githubusercontent.com/ansanloms/deno-gas-oauth2-types/v38.0.0/types/index.d.ts"
+      "https://esm.sh/@types/google-apps-script@1.0.64/index.d.ts",
+      "https://esm.sh/@types/google-apps-script-oauth2@38.0.0/index.d.ts"
     ]
   }
 }
