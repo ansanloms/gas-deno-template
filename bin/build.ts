@@ -1,7 +1,7 @@
 import * as path from "std/path/mod.ts";
 import * as fs from "std/fs/mod.ts";
 import { build, stop } from "esbuild/mod.js";
-import GasPlugin from "esbuild-gas-plugin/mod.ts";
+import { GasPlugin } from "esbuild-gas-plugin";
 import httpFetch from "esbuild_plugin_http_fetch/index.js";
 
 const __filename = path.fromFileUrl(import.meta.url);
