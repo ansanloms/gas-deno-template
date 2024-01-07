@@ -4,8 +4,28 @@ import { build, stop } from "esbuild/mod.js";
 import { GasPlugin } from "esbuild-gas-plugin";
 import httpFetch from "esbuild_plugin_http_fetch/index.js";
 
-const __filename = path.fromFileUrl(import.meta.url);
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
+
+const copy = async (filename: string) => {
+  const file = await Deno.stat(path.join(__dirname, `../src/${filename}`))
+    .catch(() => undefined);
+
+  const src = path.join(__dirname, `../src/${filename}`);
+  const dest = path.join(__dirname, `../dist/${filename}`);
+
+  if (file?.isFile) {
+    await Deno.mkdir(path.dirname(dest), { recursive: true });
+    await fs.copy(src, dest);
+    return;
+  }
+
+  if (file?.isDirectory) {
+    for await (const entry of Deno.readDir(src)) {
+      await copy(`${filename}/${entry.name}`);
+    }
+    return;
+  }
+};
 
 await build({
   entryPoints: [path.join(__dirname, "../src/main.ts")],
@@ -17,9 +37,5 @@ stop();
 
 await Promise.all([
   "appsscript.json",
-].map((file) =>
-  fs.copy(
-    path.join(__dirname, `../src/${file}`),
-    path.join(__dirname, `../dist/${file}`),
-  )
-));
+  "templates",
+].map(copy));
