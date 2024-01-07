@@ -10,9 +10,9 @@
     ]
   },
   "imports": {
-    "std/": "https://deno.land/std@0.202.0/",
-    "esbuild/": "https://deno.land/x/esbuild@v0.19.3/",
-    "esbuild-gas-plugin": "https://esm.sh/v132/esbuild-gas-plugin@0.7.0",
+    "std/": "https://deno.land/std@0.211.0/",
+    "esbuild/": "https://deno.land/x/esbuild@v0.19.11/",
+    "esbuild-gas-plugin": "https://esm.sh/esbuild-gas-plugin@0.7.0",
     "esbuild_plugin_http_fetch/": "https://deno.land/x/esbuild_plugin_http_fetch@v1.0.3/"
   },
   "tasks": {
@@ -22,8 +22,8 @@
   "compilerOptions": {
     "types": [
       "./types/global.d.ts",
-      "https://esm.sh/@types/google-apps-script@1.0.71/index.d.ts",
-      "https://esm.sh/@types/google-apps-script-oauth2@38.0.1/index.d.ts"
+      "https://esm.sh/@types/google-apps-script@1.0.78/index.d.ts",
+      "https://esm.sh/@types/google-apps-script-oauth2@38.0.4/index.d.ts"
     ]
   }
 }
