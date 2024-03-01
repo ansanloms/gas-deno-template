@@ -35,6 +35,7 @@ await build({
   bundle: true,
   outfile: path.join(__dirname, "../dist/bundle.js"),
   plugins: [httpFetch, GasPlugin],
+  tsconfigRaw: { compilerOptions: { useDefineForClassFields: false } },
 });
 stop();
 
