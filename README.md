@@ -4,9 +4,33 @@ Writing Google Apps Script in deno.
 
 ## Usage
 
-### build
+### Login
 
 ```bash
-deno task clean
-deno task build
+deno task clasp login
+```
+
+Then enable the Google Apps Script API:
+<https://script.google.com/home/usersettings>
+
+### Create new project
+
+```bash
+mkdir ./dist
+deno task clasp create --rootDir ./dist
+mv ./dist/.clasp.json .
+```
+
+### Clone exists project
+
+```bash
+mkdir ./dist
+deno task clasp clone --id <Project ID> --rootDir ./dist
+mv ./dist/.clasp.json .
+```
+
+### Deploy
+
+```bash
+deno task deploy
 ```
