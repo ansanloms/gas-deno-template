@@ -25,7 +25,7 @@ mv ./dist/.clasp.json .
 
 ```bash
 mkdir ./dist
-deno task clasp clone --id <Project ID> --rootDir ./dist
+deno task clasp clone --rootDir ./dist
 mv ./dist/.clasp.json .
 ```
 
