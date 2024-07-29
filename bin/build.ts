@@ -1,5 +1,5 @@
-import * as path from "std/path/mod.ts";
-import * as fs from "std/fs/mod.ts";
+import * as path from "@std/path";
+import * as fs from "@std/fs";
 import { build, stop } from "esbuild/mod.js";
 import { GasPlugin } from "esbuild-gas-plugin";
 import httpFetch from "esbuild_plugin_http_fetch/index.js";

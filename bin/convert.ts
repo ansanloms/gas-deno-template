@@ -1,8 +1,8 @@
 // @see https://scrapbox.io/takker/Deno%E3%81%8B%E3%82%89Google_Apps_Script%E3%81%AE%E5%9E%8B%E5%AE%9A%E7%BE%A9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%81%8B%E8%A9%A6%E3%81%99
 
 import { Octokit } from "octokit";
-import * as fs from "std/fs/mod.ts";
-import * as path from "std/path/mod.ts";
+import * as fs from "@std/fs";
+import * as path from "@std/path";
 
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 
