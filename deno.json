@@ -16,15 +16,16 @@
     ]
   },
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.0",
-    "@std/path": "jsr:@std/path@^1.0.2",
+    "@google/clasp": "npm:@google/clasp@2.4.2",
+    "@std/fs": "jsr:@std/fs@1.0.4",
+    "@std/path": "jsr:@std/path@1.0.6",
     "esbuild-gas-plugin": "https://esm.sh/esbuild-gas-plugin@0.8.0/",
-    "esbuild/": "https://deno.land/x/esbuild@v0.23.0/",
+    "esbuild/": "https://deno.land/x/esbuild@v0.24.0/",
     "esbuild_plugin_http_fetch/": "https://deno.land/x/esbuild_plugin_http_fetch@v1.0.3/",
     "octokit": "https://esm.sh/octokit@4.0.2/"
   },
   "tasks": {
-    "clasp": "deno run -A npm:@google/clasp@2.4.2",
+    "clasp": "echo \"import '@google/clasp'\" | deno run -A -",
     "build": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/build.ts",
     "deploy": "deno task build && deno task clasp push",
     "convert": "deno run --allow-read --allow-env --allow-net --allow-write --allow-run ./bin/convert.ts"
