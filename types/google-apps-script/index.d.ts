@@ -50,6 +50,7 @@
 /// <reference types="./apis/directory_v1.d.ts" />
 /// <reference types="./apis/docs_v1.d.ts" />
 /// <reference types="./apis/drive_v2.d.ts" />
+/// <reference types="./apis/drive_v3.d.ts" />
 /// <reference types="./apis/driveactivity_v2.d.ts" />
 /// <reference types="./apis/gmail_v1.d.ts" />
 /// <reference types="./apis/groupsmigration_v1.d.ts" />
